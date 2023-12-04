@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+/* ===== Utility Classes ====  */
+.mb-24px {
+  margin-bottom: 24px;
+}
+.mr-16px {
+  margin-right: 16px !important;
+}
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.text-end {
+  text-align: right !important;
+}
+.primary-btn {
+  background-color: #228cf5 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 8px 36px !important;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: capitalize !important;
+}
+.secondary-btn {
+  background-color: #eee !important;
+  color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 8px 36px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-layout {
+  border: 1px solid rgba(224, 224, 224, 1);
+  padding: 16px;
+  border-radius: 4px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-layout.item-flex {
+  min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.page-layout h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Navbar CSS ====== */
+.nav-items {
+  color: #000;
+  padding: 12px;
+  background-color: transparent !important;
+  font-size: 18px;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .nav-items {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* ===== Table CSS ==== */
+.table-box {
+  height: 100%;
+}
+.table-box-header {
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+.table-box-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+.custom-data-grid {
+  border-width: 0px !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  min-width: 600px !important;
+}
+.custom-data-grid .MuiDataGrid-columnSeparator {
+  display: none !important;
+}
+.table-box {
+  border: 1px solid rgba(224, 224, 224, 1);
+  border-radius: 4px;
+}
+.custom-header {
+  outline: none !important;
+  font-size: 18px;
+}
+.custom-cell {
+  font-size: 16px;
+  color: #454343;
+  outline: none !important;
+}
+
+/* ===== Tabs CSS ====== */
+.custom-tabs {
+  position: relative;
+  height: calc(100% - 52px);
+}
+.custom-tabs .tabs-list {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  background-color: #dfdfdf;
+  border-radius: 25px;
+}
+.custom-tabs .tabs-list .MuiTab-root {
+  background-color: transparent;
+  border: none;
+  padding: 8px 9px;
+  display: flex;
+  cursor: pointer;
+}
+.custom-tabs .tabs-list .MuiTab-root.Mui-selected {
+  color: #fff;
+  background-color: #328ef4;
+  border-radius: 50%;
+}
+
+/* ====== media-card CSS ======= */
+.media-card {
+  width: 360px;
+  height: 450px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+}
+.media-card .MuiCheckbox-root {
+  color: rgba(224, 224, 224, 1);
+}
+.media-card .MuiCardContent-root {
+  padding: 0%;
+}
+.media-card .MuiFormControlLabel-root {
+  padding: 8px;
+  margin: 0;
+}
+.media-card .MuiCardMedia-root {
+  height: 310px;
+  padding: 0 30px;
+}
+.media-card .media-card-footer {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
+.media-card .media-card-footer h5 {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.media-card .media-card-footer h3 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+@media (max-width: 600px) {
+  .media-card {
+    width: 100%;
+  }
+}
+
+/* ===== success-card CSS ====== */
+.success-card {
+  align-items: center !important;
+  justify-content: center !important;
+}
+.success-card .card {
+  width: 400px;
+  max-width: 100%;
+  height: 150px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+}
+.success-card .card .title {
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+.success-card .card .icon {
+  color: #228cf5;
+  font-size: 34px;
 }
 
-.App-link {
-  color: #61dafb;
+/* ==== Form CSS ==== */
+.form-layout {
+  display: flex;
+  flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-label {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.form-control,
+.form-select {
+  border: 1px solid rgba(224, 224, 224, 1);
+  padding: 14px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border: 1px solid #228cf5;
+}
+.form-control.custom-textarea {
+  resize: none;
+  height: 152px;
 }
